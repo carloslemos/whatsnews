@@ -11,10 +11,17 @@
     <a id="compartir" href="#">Compartir en WhatsApp</a>
     <script type="text/javascript">
         var compartir = document.getElementById('compartir'),
-            cadena = Number(window.location.hash.replace(/.*cadena=(\d).*/,"$1"))+1;
+            cadena = window.location.hash.replace(/.*cadena=(\d).*/,"$1");
+
+        //create URL based in chain distance
+        url = 'whatsapp://send?text='+encodeURIComponent(
+                '¡Hola Mundo!'
+                +window.location.href.replace(/(.*)#.*/,"$1")
+                +'#!/cadena='+(isNaN(cadena)?0:cadena+1)
+            );
         
         // change the share URL
-        compartir.href="#!/cadena="+(isNaN(cadena)?cadena:0);
+        compartir.href=url;
     </script>
 </body>
 </html>
