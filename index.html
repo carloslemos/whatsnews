@@ -4,35 +4,46 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-	<title>¡Hola Mundo! | WhatsNews</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>¡Hola Mundo! | WhatsMetrics</title>
+
 </head>
 <body>
-	<h1>¡Hola Mundo!</h1>
-	<a id="compartir" href="#">Compartir en WhatsApp</a>
-	<script type="text/javascript">
-		var compartir = document.getElementById('compartir'),
-			cadena = window.location.hash.replace(/.*cadena=(\d).*/,"$1");
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+     <div class="espacio"></div>
+    <div class="jumbotron">
+      <img src="img/whatsappmetriclogo.png" alt="logowametric">
+  <h1 class="text-center">¡Bienvenidos a WhatsMetrics!</h1>
+  <p>Desarrollamos metricas para contenidos compartidos en WhatsApp</p>
+  <p>
+  <a id="compartir" href="#" class="btn btn-primary btn-lg">
+    Compartir en WhatsApp
+    </a></p>
+  <div class="espacio2"></div>
+</div>
+   
 
+   
+    <script type="text/javascript">
+    var compartir = document.getElementById('compartir'),
+      cadena = window.location.hash.replace(/.*cadena=(\d).*/,"$1");
         //create URL based in chain distance
         url = 'whatsapp://send?text='+encodeURIComponent(
-				'¡Hola Mundo!'
-				+window.location.href.replace(/(.*)#.*/,"$1")
-				+'#!/cadena='+(isNaN(cadena)?0:cadena+1)
+        '¡Hola Mundo!'
+        +window.location.href.replace(/(.*)#.*/,"$1")
+        +'#!/cadena='+(isNaN(cadena)?0:Number(cadena)+1)
             );
         
         // change the share URL
         compartir.href=url;
     </script>
-
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-66909650-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');  ga('create', 'UA-66909650-1', 'auto');
+ ga('send', 'pageview');</script> 
 </body>
 </html>
