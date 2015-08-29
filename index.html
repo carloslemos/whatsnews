@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+	<title>¡Hola Mundo! | WhatsNews</title>
+</head>
+<body>
+    <h1>¡Hola Mundo!</h1>
+    <a id="compartir" href="#">Compartir en WhatsApp</a>
+    <script type="text/javascript">
+        var compartir = document.getElementById('compartir'),
+            cadena = Number(window.location.hash.replace(/.*cadena=(\d).*/,"$1"))+1;
+        
+        // change the share URL
+        compartir.href="#!/cadena="+(isNaN(cadena)?cadena:0);
+    </script>
+</body>
+</html>
