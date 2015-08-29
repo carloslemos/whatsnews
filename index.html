@@ -8,14 +8,14 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	<title>¡Hola Mundo! | WhatsMetrics</title>
+	<title>¡Hola Mundo! | WhatsAppMetrics</title>
 </head>
 <body>
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 	<div class="espacio"></div>
 	<div class="jumbotron">
 		<img src="img/whatsappmetriclogo.png" alt="logowametric">
-		<h1 class="text-center">¡Bienvenidos a WhatsMetrics!</h1>
+		<h1 class="text-center">¡Bienvenidos a WhatsAppMetrics!</h1>
 		<p>Desarrollamos metricas para contenidos compartidos en WhatsApp</p>
 		<p>
 			<a id="compartir" href="#" class="btn btn-primary btn-lg" style="display:none;">
@@ -46,7 +46,7 @@
 			, function(e){
 				console.log(e);
 				string = 'whatsapp://send?text='+encodeURIComponent(
-					'¡Hola Mundo! '
+					'WhatsAppMetrics: Colabora con el desarrollo entrando al link y compartiendolo '
 					+e.data.url
 				);
 
